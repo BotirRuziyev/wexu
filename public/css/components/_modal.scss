@@ -1,0 +1,209 @@
+.modal {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #1e1e1e, $alpha: 0.5);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    &.success-modal {
+        .modal-content {
+            &__in {
+                max-width: 502px;
+                padding-bottom: 80px;
+                @include respond(sm) {
+                    max-width: 100%;
+                    padding-bottom: 40px;
+                }
+            }
+            .modal-header {
+                margin-bottom: 30px;
+                @include respond(sm) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    @include respond(sm) {
+        padding: 0 10px;
+    }
+    .modal-content {
+        padding: 50px 0;
+        max-height: 100%;
+        overflow-y: auto;
+        @include respond(sm) {
+            width: 100%;
+        }
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        &__in {
+            max-width: 580px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            @include respond(sm) {
+                max-width: 100%;
+            }
+        }
+        .modal-header {
+            display: flex;
+            justify-content: end;
+            margin-bottom: 20px;
+            .close-btn {
+                cursor: pointer;
+            }
+        }
+        .modal-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            @include respond(sm) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .form-control {
+                &:nth-child(5) {
+                    grid-column: span 2;
+                    @include respond(sm) {
+                        grid-column: span 1;
+                    }
+                }
+                .form-input,
+                .form-textarea {
+                    width: 100%;
+                    border: 2px solid var(--new-blue);
+                    border-radius: 10px;
+                    height: 60px;
+                    padding: 20px;
+                    resize: none;
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: var(--new-blue);
+                    &::placeholder {
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 140%;
+                        color: #80d7f7;
+                    }
+                }
+                .form-textarea {
+                    height: 120px;
+                }
+                .g-recaptcha {
+                    max-width: 100%;
+                    overflow: hidden;
+                    & > div:first-of-type {
+                        width: 100% !important;
+                    }
+                    .rc-anchor-light.rc-anchor-normal {
+                        width: 100%;
+                    }
+
+                    iframe {
+                        width: 100%;
+                    }
+                }
+                .iti--separate-dial-code {
+                    .iti__selected-flag {
+                        background-color: transparent;
+                        font-family: var(--font-family);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 140%;
+                        color: var(--new-blue);
+                    }
+                }
+                .intl-tel-input.allow-dropdown {
+                    -webkit-box-flex: 1;
+                    -ms-flex: 1 1 auto;
+                    flex: 1 1 auto;
+                    width: 1%;
+                    .flag-container {
+                        z-index: 4;
+                        .iti-flag {
+                            background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/img/flags.png");
+                        }
+                        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+                            only screen and (min--moz-device-pixel-ratio: 2),
+                            only screen and (-o-min-device-pixel-ratio: 2 / 1),
+                            only screen and (min-device-pixel-ratio: 2),
+                            only screen and (min-resolution: 192dpi),
+                            only screen and (min-resolution: 2dppx) {
+                            .iti-flag {
+                                background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/img/flags@2x.png");
+                            }
+                        }
+                    }
+                }
+            }
+            .skylinex-button {
+                width: 100%;
+                background: var(--new-blue);
+                border-color: var(--new-blue);
+                padding: 20px;
+                &:hover {
+                    background-color: var(--white);
+                    color: var(--new-blue);
+                    .icon {
+                        transform: rotate(45deg);
+                        svg {
+                            path {
+                                stroke: var(--new-blue);
+                            }
+                        }
+                    }
+                }
+                .icon {
+                    transition: 0.3s;
+                    svg {
+                        path {
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+        .modal-check {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 18px;
+            img {
+                @include respond(sm) {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+        .success-description {
+            max-width: 422px;
+            margin: 0 auto;
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--new-blue);
+            @include respond(sm) {
+                text-transform: capitalize;
+                font-size: 18px;
+                line-height: 140%;
+            }
+        }
+    }
+}

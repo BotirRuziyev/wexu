@@ -1,0 +1,36 @@
+.skylinex-button {
+    @include flex-center;
+    gap: 10px;
+    padding: 11px 33px;
+    background: var(--orange);
+    border-radius: 30px;
+    border: 2px solid var(--orange);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white);
+    transition: 0.3s;
+    .icon {
+        transition: 0.3s;
+        svg {
+            path {
+                transition: 0.3s;
+            }
+        }
+    }
+    &:hover {
+        background: var(--white);
+        color: var(--orange);
+        .icon {
+            transform: rotate(45deg);
+            svg {
+                path {
+                    stroke: var(--orange);
+                }
+            }
+        }
+    }
+}

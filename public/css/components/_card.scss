@@ -1,0 +1,77 @@
+.skylinex-card {
+    border: 2px solid var(--new-blue);
+    border-radius: 10px;
+    background: var(--white);
+    padding: 60px 20px 20px;
+    position: relative;
+    transition: 0.3s;
+    .card-img {
+        width: 80px;
+        height: 80px;
+        @include flex-center;
+        border-radius: 100%;
+        background-color: var(--new-blue);
+        position: absolute;
+        top: -40px;
+        left: 20px;
+        transition: 0.3s;
+    }
+    &:hover {
+        background: var(--f2);
+        border-color: var(--orange);
+        .card-img {
+            background: var(--orange);
+        }
+        .list-head,
+        .card-title,
+        .card-description__item,
+        .card-num {
+            color: var(--orange);
+            .icon {
+                svg {
+                    path {
+                        stroke: var(--orange);
+                    }
+                }
+            }
+        }
+    }
+    .card-description__wrapper {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .list-head {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        color: var(--new-blue);
+        transition: 0.3s;
+        @include respond(sm) {
+            flex-direction: column;
+        }
+        span {
+            font-weight: 400;
+            line-height: 160%;
+        }
+    }
+    .card-description__list {
+        padding-left: 25px;
+        .card-description__item {
+            list-style: disc;
+            .icon {
+                svg {
+                    path {
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}

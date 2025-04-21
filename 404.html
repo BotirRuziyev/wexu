@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- aos -->
+    <link rel="stylesheet" href="./public/libs/aos.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <title>404 page</title>
+</head>
+
+<body>
+    <main class="main">
+        <!-- header -->
+        <header class="header">
+            <div class="header-in">
+                <div class="logo">
+                    <a href="./index.html" class="logo-link">
+                        <img src="./public/img/logo.svg" alt="" />
+                    </a>
+                </div>
+                <nav class="header-nav">
+                    <button class="burger-close__btn" onclick="openMenu()">
+                        <img src="./public/img/icons/cross-closed.svg" alt="" />
+                    </button>
+                    <div class="header-lang" onclick="openLang(event)">
+                        <button class="lang-btn">
+                            ENG
+                            <span class="arrow-icon">
+                                <img src="./public/img/icons/arrow.svg" alt="" />
+                            </span>
+                        </button>
+                        <div class="lang-menu">
+                            <div class="lang-item">ENG</div>
+                            <div class="lang-item selected">RUS</div>
+                        </div>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="list-item" onclick="openMenu()">
+                            <a href="index.html#advantages" class="nav-link">ADVANTAGES</a>
+                        </li>
+                        <li class="list-item" onclick="openMenu()">
+                            <a href="index.html#services" class="nav-link">SERVICES</a>
+                        </li>
+                        <li class="list-item" onclick="openMenu()">
+                            <a href="index.html#cases" class="nav-link">CASES</a>
+                        </li>
+                        <li class="list-item" onclick="openMenu()">
+                            <a href="index.html#contact" class="nav-link">CONTACTS</a>
+                        </li>
+                    </ul>
+                    <ul class="header-contact__list">
+                        <li class="contact-item">
+                            <a href="https://t.me/wexuuae" target="_blank" class="telegram-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 0C5.376 0 0 5.376 0 12C0 18.624 5.376 24 12 24C18.624 24 24 18.624 24 12C24 5.376 18.624 0 12 0ZM17.568 8.16C17.388 10.056 16.608 14.664 16.212 16.788C16.044 17.688 15.708 17.988 15.396 18.024C14.7 18.084 14.172 17.568 13.5 17.124C12.444 16.428 11.844 15.996 10.824 15.324C9.636 14.544 10.404 14.112 11.088 13.416C11.268 13.236 14.34 10.44 14.4 10.188C14.4083 10.1498 14.4072 10.1102 14.3968 10.0726C14.3863 10.0349 14.3668 10.0004 14.34 9.972C14.268 9.912 14.172 9.936 14.088 9.948C13.98 9.972 12.3 11.088 9.024 13.296C8.544 13.62 8.112 13.788 7.728 13.776C7.296 13.764 6.48 13.536 5.868 13.332C5.112 13.092 4.524 12.96 4.572 12.54C4.596 12.324 4.896 12.108 5.46 11.88C8.964 10.356 11.292 9.348 12.456 8.868C15.792 7.476 16.476 7.236 16.932 7.236C17.028 7.236 17.256 7.26 17.4 7.38C17.52 7.476 17.556 7.608 17.568 7.704C17.556 7.776 17.58 7.992 17.568 8.16Z"
+                                        fill="#00AEEF" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="contact-item">
+                            <a href="tel:+971506743310" class="phone-link">
+                                +971 50 674 3310
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="index.html#contact" class="skylinex-button" onclick="openMenu()">Order a consultation</a>
+                </nav>
+                <div class="header-right__block">
+                    <div class="header-lang" onclick="openLang(event)">
+                        <button class="lang-btn">
+                            ENG
+                            <span class="arrow-icon">
+                                <img src="./public/img/icons/arrow.svg" alt="" />
+                            </span>
+                        </button>
+                        <div class="lang-menu">
+                            <div class="lang-item">ENG</div>
+                            <div class="lang-item selected">RUS</div>
+                        </div>
+                    </div>
+                    <ul class="header-contact__list">
+                        <li class="contact-item">
+                            <a href="https://t.me/wexuuae" target="_blank" class="telegram-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 0C5.376 0 0 5.376 0 12C0 18.624 5.376 24 12 24C18.624 24 24 18.624 24 12C24 5.376 18.624 0 12 0ZM17.568 8.16C17.388 10.056 16.608 14.664 16.212 16.788C16.044 17.688 15.708 17.988 15.396 18.024C14.7 18.084 14.172 17.568 13.5 17.124C12.444 16.428 11.844 15.996 10.824 15.324C9.636 14.544 10.404 14.112 11.088 13.416C11.268 13.236 14.34 10.44 14.4 10.188C14.4083 10.1498 14.4072 10.1102 14.3968 10.0726C14.3863 10.0349 14.3668 10.0004 14.34 9.972C14.268 9.912 14.172 9.936 14.088 9.948C13.98 9.972 12.3 11.088 9.024 13.296C8.544 13.62 8.112 13.788 7.728 13.776C7.296 13.764 6.48 13.536 5.868 13.332C5.112 13.092 4.524 12.96 4.572 12.54C4.596 12.324 4.896 12.108 5.46 11.88C8.964 10.356 11.292 9.348 12.456 8.868C15.792 7.476 16.476 7.236 16.932 7.236C17.028 7.236 17.256 7.26 17.4 7.38C17.52 7.476 17.556 7.608 17.568 7.704C17.556 7.776 17.58 7.992 17.568 8.16Z"
+                                        fill="#00AEEF" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="contact-item">
+                            <a href="tel:+971506743310" class="phone-link">
+                                +971 50 674 3310
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="index.html#contact" class="skylinex-button">Order a consultation</a>
+                </div>
+                <button class="burger-btn" onclick="openMenu()">
+                    <img src="./public/img/icons/burger-icon.svg" alt="" />
+                </button>
+            </div>
+        </header>
+        <!-- header -->
+        <div class="error-section">
+            <div class="error-section__in">
+                <div class="error-body">
+                    <p class="error-text">ERROR</p>
+                    <div class="text-404">
+                        <img src="./public/img/404.svg" alt="">
+                        <h2 class="page-note__found">PAGE NOT FOUND</h2>
+                    </div>
+                    <div class="error-description">
+                        The link you followed may be broken or the page might have been removed
+                    </div>
+                    <a href="/index.html" class="skylinex-button">
+                        Go to Homepage
+                        <div class="icon">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.87866 1.05024L11 1M11 1V8.17157M11 1L1 11" stroke="white" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="error-img">
+                    <span class="note-img">
+                        <img src="./public/img/note.svg" alt="">
+                    </span>
+                    <span class="cloud-img">
+                        <img src="./public/img/cloud.svg" alt="">
+                    </span>
+                    <span class="weather-img">
+                        <svg width="766" height="448" viewBox="0 0 766 448" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="weather-item" opacity="0.5"
+                                d="M129.562 3.34578C128.662 3.86934 127.816 4.62045 127.069 5.50446C126.952 0.550804 123.426 -1.42764 119.083 1.09953C117.692 1.90903 116.384 3.08502 115.245 4.47546C113.312 1.06932 109.306 0.278962 104.665 2.97931C98.1376 6.77711 92.846 16.0149 92.846 23.6105C92.846 24.2377 92.8949 24.8217 92.9649 25.3865C92.0338 25.1439 90.893 25.3392 89.6552 26.0601C86.5324 27.8774 84 32.2975 84 35.9312C84 39.5659 86.5324 41.0389 89.6552 39.2215L129.564 15.9997C132.566 14.2529 135 10.003 135 6.50927C135 3.01553 132.564 1.59791 129.562 3.34578Z"
+                                fill="#6AB8F1" />
+                            <path class="weather-item"
+                                d="M40.2981 332.308C39.7031 332.651 39.1283 333.08 38.5788 333.566C38.3408 325.84 32.7532 322.768 25.8758 326.733C20.2751 329.962 15.5305 336.875 13.8293 343.65C12.4458 343.464 10.8223 343.824 9.07771 344.83C4.06389 347.72 0 354.749 0 360.529C0 366.31 4.06389 368.652 9.07771 365.762L40.2981 347.763C44 345.629 47 340.439 47 336.172C47 331.904 44 330.174 40.2981 332.308Z"
+                                fill="url(#paint0_linear_2062_225)" />
+                            <path class="weather-item"
+                                d="M758.843 408.635C757.613 409.13 756.409 409.92 755.304 410.899C756.064 404.628 751.98 401.479 746.04 403.867C744.137 404.631 742.272 405.874 740.581 407.417C738.767 402.763 733.861 401.026 727.513 403.576C718.586 407.163 710.22 417.84 708.828 427.424C708.713 428.216 708.668 428.962 708.652 429.687C707.523 429.209 706.048 429.246 704.355 429.925C700.084 431.642 696.082 436.75 695.416 441.337C694.75 445.922 697.673 448.249 701.944 446.533L756.526 424.603C760.632 422.953 764.481 418.041 765.121 413.633C765.761 409.224 762.95 406.986 758.843 408.635Z"
+                                fill="#6AB8F1" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2062_225" x1="42.3532" y1="332.049" x2="0.0450694"
+                                    y2="364.33" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#4174B0" />
+                                    <stop offset="1" stop-color="#6AB8F1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="main-container">
+                <div class="footer-in">
+                    <nav class="footer-nav">
+                        <ul class="nav-list">
+                            <li class="list-item">
+                                <a href="index.html#advantages" class="nav-link">ADVANTAGES</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="index.html#services" class="nav-link">SERVICES</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="index.html#cases" class="nav-link">CASES</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="index.html#contact" class="nav-link">CONTACTS</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="left-block">
+                        <div class="logo">
+                            <a href="/index.html">
+                                <img src="./public/img/logo.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="privacy-policy">
+                            <a href="#" class="privacy-policy__link">Privacy policy</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <ul class="contact-list">
+                            <li class="contact-item">
+                                <div class="icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 10.333C0 10.0763 0.059 9.829 0.177 9.591C0.295 9.35233 0.461667 9.16067 0.677 9.016L5.062 5.902C5.21133 5.796 5.364 5.72 5.52 5.674C5.676 5.62733 5.83533 5.604 5.998 5.604C6.16067 5.604 6.32067 5.62733 6.478 5.674C6.63533 5.72067 6.78867 5.79667 6.938 5.902L11.323 9.016C11.5383 9.16067 11.705 9.35233 11.823 9.591C11.941 9.829 12 10.0763 12 10.333V16.385C12 16.829 11.8417 17.209 11.525 17.525C11.2083 17.841 10.8283 17.9993 10.385 18H9.462C9.01733 18 8.637 17.8417 8.321 17.525C8.005 17.2083 7.84667 16.8283 7.846 16.385V13.846C7.846 13.59 7.75633 13.372 7.577 13.192C7.39767 13.012 7.17967 12.9223 6.923 12.923H5.077C4.82033 12.923 4.60233 13.013 4.423 13.193C4.24367 13.373 4.15367 13.5907 4.153 13.846V16.385C4.153 16.829 3.995 17.209 3.679 17.525C3.363 17.841 2.98333 17.9993 2.54 18H1.617C1.17233 18 0.791667 17.8417 0.475 17.525C0.158333 17.2083 0 16.8287 0 16.386V10.333ZM20 3.616V16.385C20 16.829 19.8417 17.209 19.525 17.525C19.2083 17.841 18.8283 17.9993 18.385 18H14.769C14.5623 18 14.3823 17.9233 14.229 17.77C14.0757 17.6167 13.9993 17.4367 14 17.23V9.333C14 9.07633 13.942 8.829 13.826 8.591C13.71 8.35233 13.545 8.15967 13.331 8.013L9.142 5.016C8.92533 4.862 8.75367 4.69067 8.627 4.502C8.50033 4.31333 8.437 4.08333 8.437 3.812V3.466C8.437 3.04933 8.58 2.70067 8.866 2.42C9.15133 2.14 9.506 2 9.93 2H18.384C18.828 2 19.208 2.15833 19.524 2.475C19.84 2.79167 19.9987 3.17167 20 3.615M15.634 6.77H16.365C16.473 6.77 16.5673 6.72967 16.648 6.649C16.7287 6.56833 16.769 6.474 16.769 6.366V5.636C16.769 5.528 16.7287 5.43367 16.648 5.353C16.5673 5.27233 16.473 5.232 16.365 5.232H15.635C15.527 5.232 15.4327 5.27233 15.352 5.353C15.2713 5.43367 15.231 5.52767 15.231 5.635V6.366C15.231 6.474 15.2713 6.56833 15.352 6.649C15.4327 6.72967 15.526 6.77 15.634 6.77ZM15.635 10.77H16.365C16.473 10.77 16.5673 10.7297 16.648 10.649C16.7287 10.5683 16.769 10.474 16.769 10.366V9.636C16.769 9.528 16.7287 9.43367 16.648 9.353C16.5673 9.27233 16.473 9.232 16.365 9.232H15.635C15.527 9.232 15.4327 9.27233 15.352 9.353C15.2713 9.43367 15.231 9.52767 15.231 9.635V10.366C15.231 10.474 15.2713 10.5683 15.352 10.649C15.4327 10.7297 15.527 10.77 15.635 10.77ZM15.635 14.77H16.365C16.473 14.77 16.5673 14.7297 16.648 14.649C16.7287 14.5683 16.769 14.474 16.769 14.366V13.636C16.769 13.528 16.7287 13.4337 16.648 13.353C16.5673 13.2723 16.473 13.232 16.365 13.232H15.635C15.527 13.232 15.4327 13.2723 15.352 13.353C15.2713 13.4337 15.231 13.528 15.231 13.636V14.366C15.231 14.474 15.2713 14.5683 15.352 14.649C15.4327 14.7297 15.527 14.77 15.635 14.77Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <a href="https://www.google.com/maps?q=25.1071791,55.2401703" target="_blank">
+                                    Dubai Hills Business Park
+                                </a>
+                            </li>
+                            <li class="contact-item">
+                                <div class="icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M17.5437 13.3062L14.0436 11.8061C13.8941 11.7424 13.728 11.729 13.5701 11.7679C13.4123 11.8068 13.2714 11.8959 13.1686 12.0218L11.6186 13.9156C9.18598 12.7686 7.22828 10.8109 6.08132 8.37827L7.9751 6.82824C8.10126 6.72564 8.19054 6.58473 8.22945 6.42684C8.26836 6.26896 8.25477 6.10269 8.19073 5.95322L6.69071 2.45316C6.62043 2.29204 6.49613 2.16048 6.33925 2.08119C6.18236 2.00189 6.00273 1.97982 5.83132 2.01878L2.58126 2.76879C2.416 2.80696 2.26855 2.90001 2.16298 3.03276C2.05742 3.16552 1.99996 3.33013 2 3.49974C2 11.5155 8.49699 18 16.5003 18C16.6699 18.0001 16.8346 17.9427 16.9674 17.8371C17.1002 17.7315 17.1933 17.5841 17.2315 17.4187L17.9815 14.1687C18.0202 13.9964 17.9977 13.8161 17.9178 13.6587C17.8379 13.5012 17.7056 13.3766 17.5437 13.3062Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <a href="tel:+971506743310">+971 50 674 3310</a>
+                            </li>
+                            <li class="contact-item">
+                                <div class="icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.8332 3.33301H4.1665C3.50346 3.33301 2.86758 3.5964 2.39874 4.06524C1.9299 4.53408 1.6665 5.16997 1.6665 5.83301V14.1663C1.6665 14.8294 1.9299 15.4653 2.39874 15.9341C2.86758 16.4029 3.50346 16.6663 4.1665 16.6663H15.8332C16.4962 16.6663 17.1321 16.4029 17.6009 15.9341C18.0698 15.4653 18.3332 14.8294 18.3332 14.1663V5.83301C18.3332 5.16997 18.0698 4.53408 17.6009 4.06524C17.1321 3.5964 16.4962 3.33301 15.8332 3.33301ZM15.8332 4.99967L10.4165 8.72467C10.2898 8.79781 10.1461 8.83632 9.99984 8.83632C9.85356 8.83632 9.70985 8.79781 9.58317 8.72467L4.1665 4.99967H15.8332Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <a href="mailto:info@m1cloud.ae" class="email-link">info@m1cloud.ae</a>
+                            </li>
+                        </ul>
+                        <div class="contact-messanger">
+                            <a href="https://www.linkedin.com/company/wexu-uae/" target="_blank" class="messeger-link">
+                                <img src="./public/img/icons/linkedin.svg" alt="">
+                            </a>
+                            <a href="https://x.com/wexu_uae?s=21" target="_blank" class="messeger-link">
+                                <img src="./public/img/icons/twitter.svg" alt="">
+                            </a>
+                            <a href="https://www.facebook.com/share/g/1639qDf7CX/?mibextid=wwXIfr" target="_blank"
+                                class="messeger-link">
+                                <img src="./public/img/icons/facebook.svg" alt="">
+                            </a>
+                            <a href="https://t.me/wexuuae" target="_blank" class=" messeger-link">
+                                <img src="./public/img/icons/telegram.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer -->
+    </main>
+
+    <!-- js -->
+    <script src="./public/libs/aos.js"></script>
+    <script src="./public/js/app.js"></script>
+</body>
+
+</html>
