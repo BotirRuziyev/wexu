@@ -155,17 +155,7 @@ if (document.getElementById("map")) {
 
 if (document.getElementById('sendForm')) {
     document.getElementById('sendForm').addEventListener('submit', function (e) {
-        // const response = grecaptcha.getResponse();
         e.preventDefault();
-        openModal("successModal")
-
-        // if (!response) {
-        //     e.preventDefault();
-        //     alert("Iltimos, CAPTCHA ni to‘ldiring!");
-        // } else {
-        //     e.preventDefault();
-        //     openModal("successModal")
-        // }
     });
 }
 
@@ -205,75 +195,87 @@ window.addEventListener('click', function (e) {
 
 
 emailjs.init("AsU_GtDa3t6C0Tzo7");
+if (document.getElementById("contactForm")) {
+    document.getElementById("contactForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        let name = document.querySelector("#contactForm #name").value.trim();
+        let email = document.querySelector("#contactForm #email").value.trim();
+        let message = document.querySelector("#contactForm #message").value.trim();
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (name === "") {
+            alert("Пожалуйста, введите ваше имя!");
+            return;
+        }
 
-document.getElementById("")
-function sendEmail() {
-    event.preventDefault();
-    let name = document.querySelector("#contactForm #name").value.trim();
-    let email = document.querySelector("#contactForm #email").value.trim();
-    let message = document.querySelector("#contactForm #message").value.trim();
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (name === "") {
-        alert("Пожалуйста, введите ваше имя!");
-        return;
-    }
-
-    if (!emailPattern.test(email)) {
-        alert("Пожалуйста, введите корректный email!");
-        return;
-    }
-    emailjs.send("service_erc90gc", "template_e19wosd", {
-        name: name,
-        email: email,
-        message: message,
-    }).then(response => {
-        alert("Сообщение успешно отправлено!");
-    }).catch(error => {
-        alert("Произошла ошибка: " + error.text);
-    });
-
+        if (!emailPattern.test(email)) {
+            alert("Пожалуйста, введите корректный email!");
+            return;
+        }
+        emailjs.send("service_erc90gc", "template_e19wosd", {
+            name: name,
+            email: email,
+            message: message,
+        }).then(response => {
+            alert("Message sent successfully!");
+        }).catch(error => {
+            alert("An error occurred: " + error.text);
+        });
+    })
 }
 
-document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const time = new Date();
-    const hours = time.getHours().toString().padStart(2, '0');
-    const minutes = time.getMinutes().toString().padStart(2, '0');
-    let name = document.querySelector("#contact-form #name").value.trim();
-    let email = document.querySelector("#contact-form #email").value.trim();
-    let phone = document.querySelector("#contact-form #phone").value.trim();
-    let company = document.querySelector("#contact-form #company").value.trim();
-    let message = document.querySelector("#contact-form #message").value.trim();
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    phone = "+" + iti.getSelectedCountryData().dialCode + phone
+if (document.getElementById('recaptcha-error')) {
+    function recaptchaSuccess() {
+        document.getElementById('recaptcha-error').style.display = 'none';
+    }
+    recaptchaSuccess()
+}
+if (document.getElementById('contact-form')) {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var response = grecaptcha.getResponse();
+        if (!response) {
+            document.getElementById('recaptcha-error').style.display = 'block';
+        } else {
+            const time = new Date();
+            const hours = time.getHours().toString().padStart(2, '0');
+            const minutes = time.getMinutes().toString().padStart(2, '0');
+            let name = document.querySelector("#contact-form #name").value.trim();
+            let email = document.querySelector("#contact-form #email").value.trim();
+            let phone = document.querySelector("#contact-form #phone").value.trim();
+            let company = document.querySelector("#contact-form #company").value.trim();
+            let message = document.querySelector("#contact-form #message").value.trim();
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            phone = "+" + iti.getSelectedCountryData().dialCode + phone
 
-    if (name === "") {
-        alert("Пожалуйста, введите ваше имя!");
-        return;
-    }
-    if (!emailPattern.test(email)) {
-        alert("Пожалуйста, введите корректный email!");
-        return;
-    }
-    if (phone === "") {
-        alert("Пожалуйста, введите ваше имя!");
-        return;
-    }
-    if (company === "") {
-        alert("Пожалуйста, введите ваше имя!");
-        return;
-    }
-    emailjs.send("service_uitt1ba", "template_xcy0ro7", {
-        name: name,
-        time: `${hours}:${minutes}`,
-        email: email,
-        phone: phone,
-        company: company,
-        message: message,
-    }).then(response => {
-        alert("Сообщение успешно отправлено!");
-    }).catch(error => {
-        alert("Произошла ошибка: " + error.text);
+            if (name === "") {
+                alert("Пожалуйста, введите ваше имя!");
+                return;
+            }
+            if (!emailPattern.test(email)) {
+                alert("Пожалуйста, введите корректный email!");
+                return;
+            }
+            if (phone === "") {
+                alert("Пожалуйста, введите ваше имя!");
+                return;
+            }
+            if (company === "") {
+                alert("Пожалуйста, введите ваше имя!");
+                return;
+            }
+            emailjs.send("service_uitt1ba", "template_xcy0ro7", {
+                name: name,
+                time: `${hours}:${minutes}`,
+                email: email,
+                phone: phone,
+                company: company,
+                message: message,
+            }).then(response => {
+                openModal("successModal")
+            }).catch(error => {
+                alert("Произошла ошибка: " + error.text);
+            });
+        }
+
     });
-
-});
+}

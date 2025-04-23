@@ -819,6 +819,10 @@ ol {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.modal .modal-content .modal-form .form-control {
+  position: relative;
+  overflow: hidden;
+}
 .modal .modal-content .modal-form .form-control:nth-child(5) {
   grid-column: span 2;
 }
@@ -859,19 +863,6 @@ ol {
 .modal .modal-content .modal-form .form-control .form-textarea {
   height: 120px;
 }
-.modal .modal-content .modal-form .form-control .g-recaptcha {
-  max-width: 100%;
-  overflow: hidden;
-}
-.modal .modal-content .modal-form .form-control .g-recaptcha > div:first-of-type {
-  width: 100% !important;
-}
-.modal .modal-content .modal-form .form-control .g-recaptcha .rc-anchor-light.rc-anchor-normal {
-  width: 100%;
-}
-.modal .modal-content .modal-form .form-control .g-recaptcha iframe {
-  width: 100%;
-}
 .modal .modal-content .modal-form .form-control .iti--separate-dial-code .iti__selected-flag {
   background-color: transparent;
   font-family: var(--font-family);
@@ -894,6 +885,32 @@ ol {
   .modal .modal-content .modal-form .form-control .intl-tel-input.allow-dropdown .flag-container .iti-flag {
     background-image: url("https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/img/flags@2x.png");
   }
+}
+.modal .modal-content .modal-form .form-control .g-recaptcha {
+  transform: scale(0.85);
+  transform-origin: 0 0;
+}
+@media (max-width: 620px) {
+  .modal .modal-content .modal-form .form-control .g-recaptcha {
+    transform: scale(0.8);
+    transform-origin: 0 0;
+  }
+}
+@media (max-width: 576px) {
+  .modal .modal-content .modal-form .form-control .g-recaptcha {
+    transform: scale(1);
+    transform-origin: 0 0;
+  }
+}
+.modal .modal-content .modal-form .form-control .recaptcha-error {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #f00;
 }
 .modal .modal-content .modal-form .skylinex-button {
   width: 100%;
@@ -2054,6 +2071,7 @@ ol {
     height: 520px;
   }
 }
+
 .error-section {
   padding: 280px 0 170px;
   background: url("/public/img/home-bg.png") no-repeat center/cover;
