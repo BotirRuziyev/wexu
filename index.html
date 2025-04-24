@@ -22,38 +22,46 @@
     <meta name="twitter:image" content="https://wexu.ai/public/img/logo.svg" />
     <!-- Favicon -->
     <link rel="icon" href="./public/img/logo.svg" type="image/x-icon" />
+
     <!-- intlTelInput -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css"
+        media="print" onload="this.media='all'" />
 
     <!-- aos -->
-    <link rel="stylesheet" href="./public/libs/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" media="print"
+        onload="this.media='all'" />
+
     <!-- swiper -->
-    <link rel="stylesheet" href="./public/libs/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+        onload="this.media='all'" />
+
     <!-- styles -->
+    <link rel="preload" href="./public/css/main.css" as="style">
     <link rel="stylesheet" href="./public/css/main.css" />
+
     <!-- SEO Title -->
     <title>
-        Wexu.ai – AI-Powered Web Design and Website Creation Solutions
+        WEXU | Secure Cloud Infrastructure & IT Solutions
     </title>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Wexu.ai",
-        "url": "https://wexu.ai",
-        "logo": "https://wexu.ai/logo.png",
-        "description": "AI-powered web design and website creation. Create modern, professional sites using artificial intelligence.",
-        "sameAs": ["https://t.me/wexu_manager"]
-      }
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://wexu.ai",
-        "name": "Wexu.ai"
-      }
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "name": "Wexu.ai",
+                "url": "https://wexu.ai",
+                "logo": "https://wexu.ai/logo.webp",
+                "description": "AI-powered web design and website creation...",
+                "sameAs": ["https://t.me/wexu_manager"]
+              },
+              {
+                "@type": "WebSite",
+                "url": "https://wexu.ai",
+                "name": "Wexu.ai"
+              }
+            ]
+          }          
     </script>
 </head>
 
@@ -64,18 +72,18 @@
             <div class="header-in">
                 <div class="logo">
                     <a href="./index.html" class="logo-link">
-                        <img src="./public/img/logo.svg" alt="" />
+                        <img src="./public/img/logo.svg" alt="" loading="lazy" />
                     </a>
                 </div>
                 <nav class="header-nav">
                     <button class="burger-close__btn" onclick="openMenu()">
-                        <img src="./public/img/icons/cross-closed.svg" alt="" />
+                        <img src="./public/img/icons/cross-closed.svg" alt="" loading="lazy" />
                     </button>
                     <div class="header-lang" onclick="openLang(event)">
                         <button class="lang-btn">
                             ENG
                             <span class="arrow-icon">
-                                <img src="./public/img/icons/arrow.svg" alt="" />
+                                <img src="./public/img/icons/arrow.svg" alt="" loading="lazy" />
                             </span>
                         </button>
                         <div class="lang-menu">
@@ -121,7 +129,7 @@
                         <button class="lang-btn">
                             ENG
                             <span class="arrow-icon">
-                                <img src="./public/img/icons/arrow.svg" alt="" />
+                                <img src="./public/img/icons/arrow.svg" alt="" loading="lazy" />
                             </span>
                         </button>
                         <div class="lang-menu">
@@ -149,7 +157,7 @@
                     <a href="#contact" class="skylinex-button">Order a consultation</a>
                 </div>
                 <button class="burger-btn" onclick="openMenu()">
-                    <img src="./public/img/icons/burger-icon.svg" alt="" />
+                    <img src="./public/img/icons/burger-icon.svg" alt="" loading="lazy" />
                 </button>
             </div>
         </header>
@@ -159,8 +167,7 @@
             <div class="home-in">
                 <div class="home-body">
                     <h1 class="home-title">
-                        Launch high-performance cloud infrastructure with built-in
-                        security, scalability, and around-the clock support.
+                        High-performance cloud with security, scalability, and 24/7 support
                     </h1>
                     <p class="home-description">
                         Perfect for startups, enterprises, and everything in between— get
@@ -170,19 +177,19 @@
                     <ul class="home-list">
                         <li class="list-item">
                             <div class="list-icon">
-                                <img src="./public/img/icons/home-check.svg" alt="" />
+                                <img src="./public/img/icons/home-check.svg" alt="" loading="lazy" />
                             </div>
                             High-availability virtual servers
                         </li>
                         <li class="list-item">
                             <div class="list-icon">
-                                <img src="./public/img/icons/home-check.svg" alt="" />
+                                <img src="./public/img/icons/home-check.svg" alt="" loading="lazy" />
                             </div>
                             Enterprise-grade cloud security
                         </li>
                         <li class="list-item">
                             <div class="list-icon">
-                                <img src="./public/img/icons/home-check.svg" alt="" />
+                                <img src="./public/img/icons/home-check.svg" alt="" loading="lazy" />
                             </div>
                             Global infrastructure. Local performance.
                         </li>
@@ -203,14 +210,11 @@
                     <svg width="776" height="680" viewBox="0 0 776 680" fill="none" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <rect width="776" height="680" fill="url(#pattern0_2011_225)" />
-                        <rect class="last-check" data-aos-duration="1000" data-aos="fade-zoom-in"
-                            data-aos-easing="ease-in-back" x="330" y="566" width="41" height="45"
+                        <rect class="last-check"  x="330" y="566" width="41" height="45"
                             fill="url(#pattern1_2011_225)" />
-                        <rect class="center-check" data-aos-duration="1000" data-aos="fade-zoom-in"
-                            data-aos-easing="ease-in-back" x="31" y="528" width="41" height="45"
+                        <rect class="center-check" x="31" y="528" width="41" height="45"
                             fill="url(#pattern2_2011_225)" />
-                        <rect class="first-check" data-aos-duration="1000" data-aos="fade-zoom-in"
-                            data-aos-easing="ease-in-back" x="119" y="319" width="41" height="45"
+                        <rect class="first-check" x="119" y="319" width="41" height="45"
                             fill="url(#pattern3_2011_225)" />
                         <defs>
                             <pattern id="pattern0_2011_225" patternContentUnits="objectBoundingBox" width="1"
@@ -258,7 +262,7 @@
                 <div class="advantages-cards">
                     <div class="skylinex-card" data-aos="fade-up" data-aos-duration="1000">
                         <div class="card-img">
-                            <img src="./public/img/icons/security.svg" alt="" />
+                            <img src="./public/img/icons/security.svg" alt="" loading="lazy" />
                         </div>
                         <h3 class="card-title">Enterprise-Grade Security</h3>
                         <ul class="card-description__list">
@@ -274,11 +278,11 @@
                         </ul>
                     </div>
                     <div class="card-1_1-img card-item__img" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="./public/img/1_1.png" alt="" />
+                        <img src="./public/img/1_1.webp" alt="" loading="lazy" />
                     </div>
                     <div class="skylinex-card" data-aos="fade-up" data-aos-duration="1000">
                         <div class="card-img">
-                            <img src="./public/img/icons/global-networking.svg" alt="" />
+                            <img src="./public/img/icons/global-networking.svg" alt="" loading="lazy" />
                         </div>
                         <h3 class="card-title">Global Cloud Presence</h3>
                         <ul class="card-description__list">
@@ -295,11 +299,11 @@
                         </ul>
                     </div>
                     <div class="card-2_1-img card-item__img" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="./public/img/2_1.png" alt="" />
+                        <img src="./public/img/2_1.webp" alt="" loading="lazy" />
                     </div>
                     <div class="skylinex-card" data-aos="fade-up" data-aos-duration="1000">
                         <div class="card-img">
-                            <img src="./public/img/icons/business.svg" alt="" />
+                            <img src="./public/img/icons/business.svg" alt="" loading="lazy" />
                         </div>
                         <h3 class="card-title">Scalability for Modern Business</h3>
                         <ul class="card-description__list">
@@ -317,7 +321,7 @@
                     </div>
                     <div class="skylinex-card" data-aos="fade-up" data-aos-duration="1000">
                         <div class="card-img">
-                            <img src="./public/img/icons/user-setting.svg" alt="" />
+                            <img src="./public/img/icons/user-setting.svg" alt="" loading="lazy" />
                         </div>
                         <h3 class="card-title">Tailored IT Solutions</h3>
                         <ul class="card-description__list">
@@ -334,14 +338,14 @@
                         </ul>
                     </div>
                     <div class="card-2_2-img card-item__img" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="./public/img/2_2.png" alt="" />
+                        <img src="./public/img/2_2.webp" alt="" loading="lazy" />
                     </div>
                     <div class="card-3_1-img card-item__img" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="./public/img/3_1.png" alt="" />
+                        <img src="./public/img/3_1.webp" alt="" loading="lazy" />
                     </div>
                     <div class="skylinex-card" data-aos="fade-up" data-aos-duration="1000">
                         <div class="card-img">
-                            <img src="./public/img/icons/clock.svg" alt="" />
+                            <img src="./public/img/icons/clock.svg" alt="" loading="lazy" />
                         </div>
                         <h3 class="card-title">24/7 Expert Support</h3>
                         <ul class="card-description__list">
@@ -357,7 +361,7 @@
                         </ul>
                     </div>
                     <div class="card-3_2-img card-item__img" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="./public/img/3_2.png" alt="" />
+                        <img src="./public/img/3_2.webp" alt="" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -497,7 +501,7 @@
                         </div>
                     </div>
                     <div class="card-item__img" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="./public/img/services-img.png" alt="" />
+                        <img src="./public/img/services-img.webp" alt="" loading="lazy" />
                     </div>
                     <div class="skylinex-card" data-aos="fade-up" data-aos-duration="1000">
                         <h4 class="card-num">05/<span>05</span></h4>
@@ -597,7 +601,7 @@
                     </div>
                     <div class="right-block">
                         <div class="card-item__img" data-aos="fade-up" data-aos-duration="1000">
-                            <img src="./public/img/services-img.png" alt="" />
+                            <img src="./public/img/services-img.webp" alt="" loading="lazy" />
                         </div>
                         <div class="skylinex-card" data-aos="fade-up" data-aos-duration="1000">
                             <h4 class="card-num">02/<span>05</span></h4>
@@ -729,12 +733,12 @@
                             </div>
                         </div>
                         <div class="skylinex-card__img">
-                            <img src="./public/img/success-stories-img.png" alt="" />
+                            <img src="./public/img/success-stories-img.webp" alt="" loading="lazy" />
                         </div>
                     </div>
                     <div class="skylinex-card" data-aos="fade-left" data-aos-duration="1000">
                         <div class="skylinex-card__img">
-                            <img src="./public/img/success-stories-img2.png" alt="" />
+                            <img src="./public/img/success-stories-img2.webp" alt="" loading="lazy" />
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">
@@ -807,7 +811,7 @@
                                 </div>
                             </div>
                             <div class="skylinex-card__img">
-                                <img src="./public/img/success-stories3.png" alt="" />
+                                <img src="./public/img/success-stories3.webp" alt="" loading="lazy" />
                             </div>
                         </div>
                         <div class="card-description__container">
@@ -892,7 +896,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="swiper-label">
-                                <img src="./public/img/icons/marks.svg" alt="" />
+                                <img src="./public/img/icons/marks.svg" alt="" loading="lazy" />
                             </div>
                             <p class="client-description">
                                 WEXU saved our Black Friday! Zero downtime during over 10,000
@@ -903,7 +907,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-label">
-                                <img src="./public/img/icons/marks.svg" alt="" />
+                                <img src="./public/img/icons/marks.svg" alt="" loading="lazy" />
                             </div>
                             <p class="client-description">
                                 We launched our SaaS platform in just 2 months instead of 6.
@@ -914,7 +918,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-label">
-                                <img src="./public/img/icons/marks.svg" alt="" />
+                                <img src="./public/img/icons/marks.svg" alt="" loading="lazy" />
                             </div>
                             <p class="client-description">
                                 Thanks to WEXU’s AI-powered logistics platform, we reduced
@@ -925,7 +929,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-label">
-                                <img src="./public/img/icons/marks.svg" alt="" />
+                                <img src="./public/img/icons/marks.svg" alt="" loading="lazy" />
                             </div>
                             <p class="client-description">
                                 Hybrid cloud + VDI = flawless operations. 99,9% uptime even
@@ -935,7 +939,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper-label">
-                                <img src="./public/img/icons/marks.svg" alt="" />
+                                <img src="./public/img/icons/marks.svg" alt="" loading="lazy" />
                             </div>
                             <p class="client-description">
                                 $1.2M saved on warehousing? Thank WEXU! Their predictive
@@ -1025,14 +1029,14 @@
                         </ul>
                         <div class="contact-messanger">
                             <a href="https://www.linkedin.com/company/wexu-uae/" target="_blank" class="messeger-link">
-                                <img src="./public/img/icons/linkedin.svg" alt="" />
+                                <img src="./public/img/icons/linkedin.svg" alt="" loading="lazy" />
                             </a>
                             <a href="https://x.com/wexu_uae?s=21" target="_blank" class="messeger-link">
-                                <img src="./public/img/icons/twitter.svg" alt="" />
+                                <img src="./public/img/icons/twitter.svg" alt="" loading="lazy" />
                             </a>
                             <a href="https://www.facebook.com/share/g/1639qDf7CX/?mibextid=wwXIfr" target="_blank"
                                 class="messeger-link">
-                                <img src="./public/img/icons/facebook.svg" alt="" />
+                                <img src="./public/img/icons/facebook.svg" alt="" loading="lazy" />
                             </a>
                         </div>
                     </div>
@@ -1065,7 +1069,7 @@
                     <div class="left-block">
                         <div class="logo">
                             <a href="/index.html">
-                                <img src="./public/img/logo.svg" alt="" />
+                                <img src="./public/img/logo.svg" alt="" loading="lazy" />
                             </a>
                         </div>
                         <div class="privacy-policy">
@@ -1112,17 +1116,17 @@
                         </ul>
                         <div class="contact-messanger">
                             <a href="https://www.linkedin.com/company/wexu-uae/" target="_blank" class="messeger-link">
-                                <img src="./public/img/icons/linkedin.svg" alt="" />
+                                <img src="./public/img/icons/linkedin.svg" alt="" loading="lazy" />
                             </a>
                             <a href="https://x.com/wexu_uae?s=21" target="_blank" class="messeger-link">
-                                <img src="./public/img/icons/twitter.svg" alt="" />
+                                <img src="./public/img/icons/twitter.svg" alt="" loading="lazy" />
                             </a>
                             <a href="https://www.facebook.com/share/g/1639qDf7CX/?mibextid=wwXIfr" target="_blank"
                                 class="messeger-link">
-                                <img src="./public/img/icons/facebook.svg" alt="" />
+                                <img src="./public/img/icons/facebook.svg" alt="" loading="lazy" />
                             </a>
                             <a href="https://t.me/wexu_manager" target="_blank" class="messeger-link">
-                                <img src="./public/img/icons/telegram.svg" alt="" />
+                                <img src="./public/img/icons/telegram.svg" alt="" loading="lazy" />
                             </a>
                         </div>
                     </div>
@@ -1208,7 +1212,7 @@
                         </button>
                     </div>
                     <div class="modal-check">
-                        <img src="./public/img/modal-check.svg" alt="" />
+                        <img src="./public/img/modal-check.svg" alt="" loading="lazy" />
                     </div>
                     <p class="success-description">
                         Thank you for your request. <br />
@@ -1221,13 +1225,19 @@
     </main>
 
     <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=en_RU" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js" defer></script>
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="./public/libs/swiper-bundle.min.js"></script>
-    <script src="./public/libs/aos.js"></script>
-    <script src="./public/js/app.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=en_RU" type="text/javascript" defer></script>
+    <script src="./public/js/app.js" defer></script>
 </body>
 
 </html>

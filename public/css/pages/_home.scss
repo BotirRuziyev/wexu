@@ -1,12 +1,12 @@
 .home-block {
     padding: 260px 0 160px;
-    background: url("/public/img/home-bg.png") no-repeat center/cover;
+    background: url("/public/img/home-bg.webp") no-repeat center/cover;
     @include respond(xl) {
         padding: 170px 0 60px;
     }
     @include respond(sm) {
         padding: 110px 0 0;
-        background: url("/public/img/home-bg-mobile.png") no-repeat center top/100%;
+        background: url("/public/img/home-bg-mobile.webp") no-repeat center top/100%;
     }
     .home-in {
         max-width: 1480px;
@@ -21,7 +21,7 @@
             padding: 0 10px;
         }
         .home-body {
-            max-width: 913px;
+            max-width: 738px;
             position: relative;
             z-index: 2;
             @include respond(xl) {
@@ -34,12 +34,12 @@
                 animation: fadeInLeft 1s ease-out forwards;
                 transform: translateX(-150px);
                 opacity: 0;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
                 font-family: var(--font-family);
                 font-weight: 700;
                 font-size: 48px;
                 text-transform: uppercase;
-                color: var(--blc);
+                color: #0369d1;
                 @include respond(md) {
                     font-size: 40px;
                 }
@@ -317,35 +317,35 @@
                 margin-bottom: 40px;
                 &:nth-child(2) {
                     order: 2;
-                    background: url("/public/img/1_1-mobile.png");
+                    background: url("/public/img/1_1-mobile.webp");
                     img {
                         display: none;
                     }
                 }
                 &:nth-child(4) {
                     order: 4;
-                    background: url("/public/img/1_2-mobile.png");
+                    background: url("/public/img/1_2-mobile.webp");
                     img {
                         display: none;
                     }
                 }
                 &:nth-child(7) {
                     order: 6;
-                    background: url("/public/img/1_1-mobile.png");
+                    background: url("/public/img/1_1-mobile.webp");
                     img {
                         display: none;
                     }
                 }
                 &:nth-child(8) {
                     order: 8;
-                    background: url("/public/img/1_2-mobile.png");
+                    background: url("/public/img/1_2-mobile.webp");
                     img {
                         display: none;
                     }
                 }
                 &:nth-child(10) {
                     order: 10;
-                    background: url("/public/img/1_1-mobile.png");
+                    background: url("/public/img/1_1-mobile.webp");
                     img {
                         display: none;
                     }

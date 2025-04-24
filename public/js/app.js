@@ -1,3 +1,4 @@
+
 AOS.init({});
 function openMenu() {
     if (window.innerWidth < 993) {
@@ -9,7 +10,6 @@ function openMenu() {
         headerNav.classList.toggle('show');
     }
 }
-
 function openLang(e) {
     const wrapper = e.currentTarget;
     const langMenu = wrapper.querySelector('.lang-menu');
@@ -34,8 +34,6 @@ function openLang(e) {
         }
     });
 }
-
-
 function openModal(id) {
     const html = document.querySelector('html');
     const modal = document.querySelectorAll(".modal");
@@ -58,7 +56,6 @@ function closeModal() {
     })
 }
 var input = document.querySelector("#phone");
-
 if (input) {
     var iti = window.intlTelInput(input, {
         autoHideDialCode: true,
@@ -71,9 +68,7 @@ if (input) {
         separateDialCode: true
     });
 }
-
 // swiper
-
 if (document.querySelector(".clientSwiper")) {
     let swiper = new Swiper(".clientSwiper", {
         slidesPerView: 1,
@@ -99,7 +94,6 @@ if (document.querySelector(".clientSwiper")) {
         },
     });
 }
-
 // map
 if (document.getElementById("map")) {
     ymaps.ready(init);
@@ -151,8 +145,6 @@ if (document.getElementById("map")) {
 
     }
 }
-
-
 if (document.getElementById('sendForm')) {
     document.getElementById('sendForm').addEventListener('submit', function (e) {
         e.preventDefault();
@@ -192,8 +184,6 @@ window.addEventListener('click', function (e) {
         headerNav.classList.remove('show');
     }
 });
-
-
 emailjs.init("AsU_GtDa3t6C0Tzo7");
 if (document.getElementById("contactForm")) {
     document.getElementById("contactForm").addEventListener("submit", (event) => {

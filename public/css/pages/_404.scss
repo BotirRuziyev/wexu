@@ -1,11 +1,11 @@
 .error-section {
     padding: 280px 0 170px;
-    background: url("/public/img/home-bg.png") no-repeat center/cover;
+    background: url("/public/img/home-bg.webp") no-repeat center/cover;
     @include respond(xl) {
         padding: 180px 0 150px;
     }
     @include respond(sm) {
-        background: url("/public/img/home-bg-mobile.png") no-repeat top/100%;
+        background: url("/public/img/home-bg-mobile.webp") no-repeat top/100%;
         padding: 90px 0 70px;
     }
     &__in {
