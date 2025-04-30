@@ -50,7 +50,7 @@ function openModal(id) {
 function closeModal() {
     const html = document.querySelector('html');
     const modal = document.querySelectorAll(".modal");
-    html.classList.remove('overflow-hidden');
+    // html.classList.remove('overflow-hidden');
     modal.forEach(e => {
         e.classList.remove('show');
     })
@@ -151,37 +151,24 @@ if (document.getElementById('sendForm')) {
     });
 }
 
+// window.addEventListener('click', function (e) {
+//     if (!e.target.closest(".modal-content__in") && !e.target.closest(".home-block .skylinex-button") && !e.target.closest(".iti--container")) {
+//         closeModal()
+//     }
+// });
+
 window.addEventListener('click', function (e) {
     const modal = document.querySelector(".modal-content__in")
     const button = document.querySelector(".home-block .skylinex-button")
     const iti = document.querySelector(".iti--container")
-    if (!e.target.closest(".header-nav") && !e.target.closest(".burger-btn") && (modal ? !e.target.closest(".modal-content__in") : true) && (button ? !e.target.closest(".home-block .skylinex-button") : true) && (iti ? !e.target.closest(".iti--container") : true)) {
+    if (!e.target.closest(".header-nav") && !e.target.closest(".burger-btn") && (modal ? (!e.target.closest(".modal-content__in") || e.target.closest(".modal-content__in .close-btn")) : true) && (button ? !e.target.closest(".home-block .skylinex-button") : true) && (iti ? !e.target.closest(".iti--container") : true)) {
         const html = document.querySelector('html');
         const header = document.querySelector('.header');
         const headerNav = document.querySelector('.header-nav');
         html.classList.remove('overflow-hidden');
         header.classList.remove('show');
         headerNav.classList.remove('show');
-    }
-
-    if (!e.target.closest(".modal-content__in") && !e.target.closest(".home-block .skylinex-button") && !e.target.closest(".iti--container")) {
         closeModal()
-
-    }
-});
-
-window.addEventListener('click', function (e) {
-    const modal = document.querySelector(".modal-content__in")
-    const button = document.querySelector(".home-block .skylinex-button")
-    const iti = document.querySelector(".iti--container")
-
-    if (!e.target.closest(".header-nav") && !e.target.closest(".burger-btn") && (modal ? !e.target.closest(".modal-content__in") : true) && (button ? !e.target.closest(".home-block .skylinex-button") : true) && (iti ? !e.target.closest(".iti--container") : true)) {
-        const html = document.querySelector('html');
-        const header = document.querySelector('.header');
-        const headerNav = document.querySelector('.header-nav');
-        html.classList.remove('overflow-hidden');
-        header.classList.remove('show');
-        headerNav.classList.remove('show');
     }
 });
 emailjs.init("AsU_GtDa3t6C0Tzo7");
@@ -269,3 +256,14 @@ if (document.getElementById('contact-form')) {
 
     });
 }
+
+
+window.onerror = function (message, source, lineno, colno, error) {
+    console.error("Xatolik:", message);
+    window.location.href = "/404.html";
+};
+
+window.addEventListener("unhandledrejection", function (event) {
+    console.error("Unhandled rejection:", event.reason);
+    window.location.href = "/404.html";
+});

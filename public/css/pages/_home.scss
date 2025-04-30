@@ -1,5 +1,6 @@
 .home-block {
     padding: 260px 0 160px;
+    margin-bottom: 70px;
     background: url("/public/img/home-bg.webp") no-repeat center/cover;
     @include respond(xl) {
         padding: 170px 0 60px;
@@ -207,7 +208,7 @@
 }
 
 .advantages {
-    padding: 120px 0 60px;
+    padding: 50px 0 60px;
     @include respond(sm) {
         padding-bottom: 0;
     }
@@ -216,6 +217,17 @@
         flex-wrap: wrap;
         column-gap: 20px;
         row-gap: 60px;
+        &.desktop-version {
+            @include respond(lg) {
+                display: none;
+            }
+        }
+        &.mobile-version {
+            display: none;
+            @include respond(lg) {
+                display: flex;
+            }
+        }
         @include respond(lg) {
             // align-items: start;
         }
@@ -386,10 +398,41 @@
         @include respond(md) {
             grid-template-columns: repeat(2, 1fr);
         }
-        &.xl-cards {
+        &.desktop-cards {
+            align-items: stretch;
             @include respond(md) {
                 display: none;
             }
+            .skylinex-card {
+                padding: 40px 10px 20px 20px;
+                .card-title {
+                    margin-bottom: 20px;
+                }
+            }
+            .card-item__img {
+                height: auto;
+            }
+            .left-block,
+            .center-block,
+            .right-block {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .right-block {
+                .skylinex-card {
+                    flex: 1 1 100%;
+                }
+            }
+        }
+        &.xl-cards {
+            display: none;
+            // @include respond(lg) {
+            //     display: grid;
+            // }
+            // @include respond(md) {
+            //     display: none;
+            // }
             @include respond(sm) {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);

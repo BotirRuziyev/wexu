@@ -181,7 +181,7 @@ ol {
   width: 100%;
   background: var(--white);
   border-bottom: 2px solid var(--orange);
-  position: fixed;
+  position: absolute;
   top: 0;
   padding: 15px 0;
   z-index: 100;
@@ -252,7 +252,7 @@ ol {
     border-radius: 0 0 0 30px;
     background: var(--white);
     padding: 25px 20px 20px;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     transition: 0.3s;
@@ -663,7 +663,7 @@ ol {
   border: 2px solid var(--new-blue);
   border-radius: 10px;
   background: var(--white);
-  padding: 60px 20px 20px;
+  padding: 60px 10px 20px 20px;
   position: relative;
   transition: 0.3s;
 }
@@ -969,6 +969,7 @@ ol {
 
 .home-block {
   padding: 260px 0 160px;
+  margin-bottom: 70px;
   background: url("/public/img/home-bg.webp") no-repeat center/cover;
 }
 @media (max-width: 1200px) {
@@ -1219,7 +1220,7 @@ ol {
 }
 
 .advantages {
-  padding: 120px 0 60px;
+  padding: 50px 0 60px;
 }
 @media (max-width: 576px) {
   .advantages {
@@ -1232,6 +1233,19 @@ ol {
   -moz-column-gap: 20px;
        column-gap: 20px;
   row-gap: 60px;
+}
+@media (max-width: 992px) {
+  .advantages-cards.desktop-version {
+    display: none;
+  }
+}
+.advantages-cards.mobile-version {
+  display: none;
+}
+@media (max-width: 992px) {
+  .advantages-cards.mobile-version {
+    display: flex;
+  }
 }
 @media (max-width: 576px) {
   .advantages-cards {
@@ -1420,10 +1434,35 @@ ol {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.our-services__cards.desktop-cards {
+  align-items: stretch;
+}
 @media (max-width: 768px) {
-  .our-services__cards.xl-cards {
+  .our-services__cards.desktop-cards {
     display: none;
   }
+}
+.our-services__cards.desktop-cards .skylinex-card {
+  padding: 40px 10px 20px 20px;
+}
+.our-services__cards.desktop-cards .skylinex-card .card-title {
+  margin-bottom: 20px;
+}
+.our-services__cards.desktop-cards .card-item__img {
+  height: auto;
+}
+.our-services__cards.desktop-cards .left-block,
+.our-services__cards.desktop-cards .center-block,
+.our-services__cards.desktop-cards .right-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.our-services__cards.desktop-cards .right-block .skylinex-card {
+  flex: 1 1 100%;
+}
+.our-services__cards.xl-cards {
+  display: none;
 }
 @media (max-width: 576px) {
   .our-services__cards.xl-cards {

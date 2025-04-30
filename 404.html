@@ -10,6 +10,11 @@
     <!-- styles -->
     <link rel="stylesheet" href="./public/css/main.css" />
     <title>404 page</title>
+    <script>
+        if (document.referrer === "" || performance.navigation.type === 1) {
+            window.location.href = "/";
+        }
+    </script>
 </head>
 
 <body>
